@@ -54,6 +54,12 @@ var elementosLista = [
     "completed": false
   },
   {
+    "userId": 7,
+    "id": 123,
+    "title": "esse et quis iste est earum aut impedit",
+    "completed": false
+  },
+  {
     "userId": 1,
     "id": 10,
     "title": "illo est ratione doloremque quia maiores aut",
@@ -65,14 +71,20 @@ function mostrar(title) {
 	this.title = title;
 }
 
-for(var i = 0; i <elementosLista.length; i++) {
+for(var i = 0; i <elementosLista.length-1 ; i++) {
 //	var str = "";
 //	str+= "<li>" + elementosLista[i].title + "</li>";
 document.getElementById('div').innerHTML += "<li>" + elementosLista[i].title + "</li>";;
 
 }
-var agrego = document.getElementById("agregarB");
-agrego.onclick = function() {
+var agregarB = document.getElementById("agregarB");
+agregarB.onclick = function() {
+	
+	var nuevoE = document.getElementById("input").value;
 
+	elementosLista.push(nuevoE);
+	document.getElementById('div').innerHTML += "<li>" + nuevoE + "</li>";;
+
+
+	console.log(elementosLista);
 }
-

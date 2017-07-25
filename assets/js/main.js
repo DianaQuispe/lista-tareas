@@ -82,7 +82,15 @@ agregarB.onclick = function() {
 	
 	var nuevoE = document.getElementById("input").value;
 
-	elementosLista.push(nuevoE);
+	var nuevo = {
+    "userId": undefined,
+    "id": undefined,
+    "title": nuevoE,
+    "completed": undefined
+  };
+
+
+	elementosLista.push(nuevo);
 	document.getElementById('div').innerHTML += "<li>" + nuevoE + "</li>";;
 
 

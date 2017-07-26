@@ -75,17 +75,50 @@ var array = [
     "completed": true
   }
 ];
-
+//'list-style:none;
  function  mostrar() { 
- 
-str ="<ul style = 'list-style:none; text-align:left ' >";
+    	str ="<ul style =  text-align:left ' >";
+
+/*
+var button = document.createElement("button")
+ul.appendChild(button);
+
+var checkbox = document.createElement('input');
+var nuevito = document.getElementById("nuevito");
+checkbox.type = "checkbox";
+checkbox.id = "id";
+ var ul = document.getElementById("listaId");
+ ul.appendChild(checkbox) + "";
+ */
  var div = document.getElementById("div");
-  for (var i = array.length - 1; i >= 0; i--) {
-    str += "<li>" + array[i].title+ "</li>" ;
-  }
-  str += "</ul>";
-  div.innerHTML = str;
-  }
+    for (var i = array.length - 1; i >= 0; i--) {
+  	    str += "<li>" + array[i].title+ "</li>" ;
+ 	}
+ str += "</ul>";
+ div.innerHTML = str;
+
+ }
+///click
+function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement; 
+}
+var ul = document.getElementById('listaId');
+
+ul.onclick = function(event) {
+	var inputB = document.getElementById("input");
+    var target = getEventTarget(event);
+    for (var i = array.length - 1; i >= 0; i--) {
+    	if(target.innerHTML === array[i].title) {
+    		div.innerHTML = array[i].title;	
+    		array[i].title = "";
+    };
+ 
+    }
+
+};
+///click
+
 
 var nuevoB = document.getElementById("agregarB"); 
 nuevoB.onclick = function() {
@@ -102,5 +135,4 @@ nuevoB.onclick = function() {
 
 }
  
-
-  mostrar();
+mostrar();

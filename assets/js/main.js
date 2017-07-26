@@ -83,11 +83,6 @@ var div = document.getElementById("div");
 
 str ="<ul style =  text-align:left ' >";
 var ul = document.getElementById("listaId");
-var checkbox = document.createElement('input');
-checkbox.type = "checkbox";
-checkbox.id = "id";
-div.innerHTML = div.appendChild(checkbox);
-
 var div = document.getElementById("div");
   for (var i = array.length - 1; i >= 0; i--) {
      str += "<li>" + array[i].title+ "</li>" ;

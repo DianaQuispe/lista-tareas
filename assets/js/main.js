@@ -110,6 +110,7 @@ div.innerHTML = div.appendChild(checkbox);
 
 var div = document.getElementById("div");
     for (var i = array.length - 1; i >= 0; i--) {
+
        str += "<li>" + array[i].title+ "</li>" ;
   	 //   if(array[i].completed == true ) {
 
@@ -119,6 +120,14 @@ var div = document.getElementById("div");
  	
 str += "</ul>";
 div.innerHTML = str;
+var lis = document.getElementsByTagName('li');
+for (var i = 0; i < lis.length; i++) {
+    lis[i].addEventListener('click',redirect,false);
+}lis
+function redirect(event){
+    var lista=(event.target.textContent);
+    (event.target).style.textDecoration =  ((event.target).style.textDecoration =="line-through") ? 'transparent' : "line-through" ;
+}	
 
 }
 
@@ -166,11 +175,3 @@ ul.onclick = function(event) {
 ///click
 */
 
-var asientos = document.getElementsByTagName('li');
-for (var i = 0; i < asientos.length; i++) {
-    asientos[i].addEventListener('click',redirect,false);
-}
-function redirect(event){
-    var asiento=(event.target.textContent);
-    (event.target).style.textDecoration =  ((event.target).style.textDecoration =="line-through") ? 'transparent' : "line-through" ;
-}	

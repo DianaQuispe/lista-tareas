@@ -77,20 +77,14 @@ var array = [
 ];
 
  function  mostrar() { 
- var checkbox = document.createElement("checkbox");
- var checkbox = document.createElement('input');
-checkbox.type = "checkbox";
-checkbox.id = "id";
-var label = document.createElement('label')
-label.htmlFor = "id";
-
- var ul = document.getElementById("listaId");
+ 
+str ="<ul style = 'list-style:none; text-align:left ' >";
+ var div = document.getElementById("div");
   for (var i = array.length - 1; i >= 0; i--) {
-
-    ul.innerHTML += checkbox;
-    ul.innerHTML += "<li>" + array[i].title ;
-
+    str += "<li>" + array[i].title+ "</li>" ;
   }
+  str += "</ul>";
+  div.innerHTML = str;
   }
 
 var nuevoB = document.getElementById("agregarB"); 
@@ -109,4 +103,4 @@ nuevoB.onclick = function() {
 }
  
 
-
+  mostrar();

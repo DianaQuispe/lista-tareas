@@ -1,0 +1,29 @@
+
+ body {
+    color: #649499;
+    background-color: #f4f5bf
+
+     }
+ h1.diana {
+ 	color: #37747b;
+    background-color:pink;
+    font-family: Arial, Helvetica, sans-serif;
+ }    
+ ul.diana {
+font-style: Arial;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: arial, sans-serif;
+ }
+ .boton{
+
+        font-size:13px;
+        font-family:Verdana,Helvetica;
+        font-weight:bold;
+        color:white;
+        background:#71c6ab;
+        border:0px;
+        width:95px;
+        height:23px;
+       }
+

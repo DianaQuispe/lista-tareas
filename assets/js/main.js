@@ -76,23 +76,6 @@ var array = [
   }
 ];
 
-/*
-	COLOR ROJO
-document.getElementById("listaId").onmousever = function() {
-mouseOver()
-};
-function mouseOver() {
-	document.getElementById("lw").style.color = "red";
-	if(true) {
-
-	}
-}
-*/
-
-//'list-style:none;
-//var button = document.createElement("button")
-//ul.appendChild(button);
-
 
 
 function  mostrar() { 
@@ -101,38 +84,42 @@ var div = document.getElementById("div");
 str ="<ul style =  text-align:left ' >";
 var ul = document.getElementById("listaId");
 var checkbox = document.createElement('input');
-var nuevito = document.getElementById("nuevito");
 checkbox.type = "checkbox";
 checkbox.id = "id";
 div.innerHTML = div.appendChild(checkbox);
 
-
-
 var div = document.getElementById("div");
-    for (var i = array.length - 1; i >= 0; i--) {
-
-       str += "<li>" + array[i].title+ "</li>" ;
+  for (var i = array.length - 1; i >= 0; i--) {
+     str += "<li>" + array[i].title+ "</li>" ;
   	 //   if(array[i].completed == true ) {
-
   	   // }
-
  	}
  	
 str += "</ul>";
 div.innerHTML = str;
 var lis = document.getElementsByTagName('li');
+var input = document.getElementById("input").value;
+var ul = document.getElementById('listaId');
+ul.onclick= function(event) {
+   
+ }
+
+
 for (var i = 0; i < lis.length; i++) {
     lis[i].addEventListener('click',redirect,false);
-}lis
-function redirect(event){
-    var lista=(event.target.textContent);
-    (event.target).style.textDecoration =  ((event.target).style.textDecoration =="line-through") ? 'transparent' : "line-through" ;
+	}
+
+	function redirect(event){
+	    var valor=(event.target.textContent);
+	    (event.target).style.textDecoration =  ((event.target).style.textDecoration =="line-through") ? 'transparent' : "line-through" ;
+	}	
+
 }	
 
-}
+
+
 
 var nuevoB = document.getElementById("agregarB"); 
-
 nuevoB.onclick = function() {
 nuevoId = document.getElementById("input").value;
 var el = [{
@@ -144,34 +131,8 @@ var el = [{
 var to = new To(this.userId, 0, nuevoId, this.completed)     
 array.push(to);
 mostrar();
+
 }
 mostrar();
 
-    ///click /*                         
-    ///click                          
-    /*
-  function getEventTarget(event) {  
-
-    event = getEventTarget || window.event;
-    return event.target || event.srcElement; 
-}
-var ul = document.getElementById('listaId');
-
-ul.onclick = function(event) { 
-    var ni = "Asd";
-    var target = getEventTarget(event);
-    for (var i = array.length - 1; i >= 0; i--) {
-    	if(target.innerHTML == array[i].title) {
-    	var inputB = document.getElementById("input").value;
-        div.innerHTML = array[i].title;	
-    	array[i].title = inputB;
-    	array[i].title = "";
-
-    };
- 
-    }
-
-};
-///click
-*/
 
